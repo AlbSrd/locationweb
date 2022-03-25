@@ -15,26 +15,26 @@ public class LocationServiceImpl implements ILocationService {
 
     @Override
     public Location saveLocation(Location location) {
-        return null;
+        return repository.save(location);
     }
 
     @Override
     public Location updateLocation(Location location) {
-        return null;
+        return repository.save(location);
     }
 
     @Override
     public void deleteLocation(Location location) {
-
+        repository.delete(location);
     }
 
     @Override
     public Location getLocationById(int id) {
-        return null;
+        return repository.findById(id).get(); //ritorna un optional senza fare un check se presente
     }
 
     @Override
     public List<Location> getAllLocations() {
-        return null;
+        return repository.findAll();
     }
 }
