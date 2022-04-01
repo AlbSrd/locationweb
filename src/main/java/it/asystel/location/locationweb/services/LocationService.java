@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface ILocationService {
+public interface LocationService {
     Location saveLocation(Location location);
 
     Location updateLocation(Location location);
