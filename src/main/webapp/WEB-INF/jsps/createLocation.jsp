@@ -24,5 +24,6 @@ nella entià - classe che si va a popolare così Spring li binda per noi ->
     </pre>
 </form>
 ${msg}
+<a href="displayLocations"> View All Locations</a>
 </body>
 </html>
