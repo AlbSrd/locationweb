@@ -15,10 +15,10 @@
 nella entià - classe che si va a popolare così Spring li binda per noi ->
 <form action="saveLoc" method="post">
     <pre>
-    Id: <input type="text" name="code"/>
-    Code: <input type="text" name="name"/>
-    Name: <input type="text" name="type"/>
-    Type: Urban<input type="radio"/>
+    Id: <input type="text" name="id"/>
+    Code: <input type="text" name="code"/>
+    Name: <input type="text" name="name"/>
+    Type: Urban<input type="radio" name="type"/>
     Rural<input type="radio" name="type"/>
     <input type="submit" value="save"/>
     </pre>
