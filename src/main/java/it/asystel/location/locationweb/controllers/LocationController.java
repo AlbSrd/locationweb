@@ -1,8 +1,9 @@
 package it.asystel.location.locationweb.controllers;
 
 import it.asystel.location.locationweb.entities.Location;
-import it.asystel.location.locationweb.services.LocationServiceImpl;
+import it.asystel.location.locationweb.services.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LocationController {
 
+    @Qualifier("locationServiceImpl")
     @Autowired
-    LocationServiceImpl service;
+    LocationService service;
 
     @RequestMapping("/v1/showCreate")
     public String showCreate() {

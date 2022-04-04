@@ -1,7 +1,7 @@
 package it.asystel.location.locationweb.services;
 
 import it.asystel.location.locationweb.entities.Location;
-import it.asystel.location.locationweb.repos.LocatinoRepository;
+import it.asystel.location.locationweb.repos.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class LocationServiceImpl implements LocationService {
 
     @Autowired
-    private LocatinoRepository repository;
+    private LocationRepository repository;
 
     @Override
     public Location saveLocation(Location location) {
