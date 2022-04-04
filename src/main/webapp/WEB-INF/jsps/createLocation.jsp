@@ -23,6 +23,6 @@ nella entià - classe che si va a popolare così Spring li binda per noi ->
     <input type="submit" value="save"/>
     </pre>
 </form>
-
+${msg}
 </body>
 </html>
