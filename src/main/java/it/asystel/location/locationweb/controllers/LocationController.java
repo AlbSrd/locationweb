@@ -2,6 +2,7 @@ package it.asystel.location.locationweb.controllers;
 
 import it.asystel.location.locationweb.entities.Location;
 import it.asystel.location.locationweb.services.LocationService;
+import it.asystel.location.locationweb.util.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,8 @@ public class LocationController {
     @Qualifier("locationServiceImpl")
     @Autowired
     LocationService service;
+    @Autowired
+    EmailUtil emailUtil;
 
     @RequestMapping("/v1/showCreate")
     public String showCreate() {
@@ -29,6 +32,9 @@ public class LocationController {
         Location locationSaved = service.saveLocation(loc);
         String msg = "Location saved with id: " + locationSaved.getId();
         modelMap.addAttribute("msg", msg);
+
+        emailUtil.sendEmail("add", "subj", "body"); //non ho creato l'account gmail
+        
         return "createLocation";
     }
 
