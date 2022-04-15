@@ -24,4 +24,14 @@ public class LocationRESTController {
     public Location createLocation(@RequestBody Location location) {
         return locationRepository.save(location);
     }
+
+    @PutMapping
+    public Location updateLocation(@RequestBody Location location) {
+        return locationRepository.save(location);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteLocation(@PathVariable("id") int id) { //string con nome della pathvariable opzionale
+        locationRepository.deleteById(id);
+    }
 }
